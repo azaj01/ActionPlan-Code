@@ -1,0 +1,33 @@
+# Adapted from SRM: src/model/time_sampler/scalar_time_sampler/scalar_time_sampler.py
+# Upstream repo: https://github.com/Chrixtar/SRM
+# Source file: https://github.com/Chrixtar/SRM/blob/main/src/model/time_sampler/scalar_time_sampler/scalar_time_sampler.py
+
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from typing import Generic, Sequence, TypeVar
+
+from torch import device, Tensor
+
+
+@dataclass
+class ScalarTimeSamplerCfg:
+    name: str
+
+
+T = TypeVar("T", bound=ScalarTimeSamplerCfg)
+
+
+class ScalarTimeSampler(Generic[T], ABC):
+    def __init__(
+        self,
+        cfg: T
+    ) -> None:
+        self.cfg = cfg    
+    
+    @abstractmethod
+    def __call__(
+        self,
+        shape: Sequence[int],
+        device: device | str = "cpu"
+    ) -> Tensor:
+        pass

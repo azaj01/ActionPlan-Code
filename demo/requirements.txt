@@ -1,0 +1,7 @@
+# FastAPI server dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+orjson>=3.9.0
+
+# Existing ActionPlan dependencies should already be installed
