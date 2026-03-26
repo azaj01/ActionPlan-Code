@@ -10,8 +10,10 @@ This is the official repository for **ActionPlan**.
 ---
 
 ## 🚀 News
+
+- **[25/03/2026]** Inference code for the online demo released.
+
 - **[March 2026]** Our paper has been submitted to arXiv!
-- **[Coming Very Soon]** Inference code for the online demo.
 
 ## 📦 Release Plan
 - ✅ **Inference Code**: Run the real-time streaming demo yourself.
